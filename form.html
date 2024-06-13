@@ -6,22 +6,28 @@
     <title>Form Dipendenti</title>
 </head>
 <body>
-    <form action="form.html" method="POST" name="Form">
-        <input type="text" placeholder="Nome" name="Name">
+    <form action="form.html" method="POST" name="form">
+        <input type="text" placeholder="Nome" name="name" required>
         <br>
-        <input type="text" placeholder="Cognome" name="Surname">
+        <input type="text" placeholder="Cognome" name="surname" required>
         <br>
-        <input type="email" placeholder="Email" name="Email">
+        <input type="date" placeholder="Data di nascita" name="birth" required>
         <br>
-        <input type="password" placeholder="Password" name="Password">
+        <input type="email" placeholder="Email" name="email" required>
         <br>
-        <input type="tel" placeholder="Numero di telefono" name="Tel_num">
+        <input type="password" placeholder="Password" name="password" required>
         <br>
-        <select>
-            <option value="">Seleziona un genere</option>
-            <option value="M">Maschio</option>
-            <option value="F">Femmina</option>
+        <input type="tel" placeholder="Numero di telefono" name="telNum">
+        <br>
+        <select required>
+            <option value="">Dipartimento</option>
+            <option value="M">Marketing</option>
+            <option value="A">Amministrazione</option>
+            <option value="R">Risorse Umane</option>
+            <option value="F">Finanze</option>
         </select>
+        <br>
+        <input type="number" placeholder="Stipendio" name="salary" required min="1000">
         <br>
         <input type="submit" value="Submit">
     </form>
