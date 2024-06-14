@@ -7,53 +7,58 @@
 </head>
 <body>
     <form action="form.html" method="POST" name="form">
-        <input type="text" placeholder="Nome" name="name" required>
+        <fieldset>
+            <legend>ANAGRAFICA</legend>
+            <input type="text" placeholder="Nome" name="name" required>
+            <br>
+            <input type="text" placeholder="Cognome" name="surname" required>
+            <br>
+            <input type="date" placeholder="Data di nascita" name="birthDate" required id="date">
+            <label for="date">Data di nascita</label>
+            <br>
+            <label>Genere</label>
+            <br>
+            <input type="radio" required name="gender" id="radio1" value="M">
+            <label for="radio1">Maschio</label>
+            <br>
+            <input type="radio" required name="gender" id="radio2" value="F">
+            <label for="radio2">Femmina</label>
+            <br>
+            <input type="email" placeholder="Email" name="email" required>
+            <br>
+            <input type="password" placeholder="Password" name="password" required>
+            <br>
+            <input type="tel" placeholder="Numero di telefono" name="telNum">
+        </fieldset>
         <br>
-        <input type="text" placeholder="Cognome" name="surname" required>
-        <br>
-        <input type="date" placeholder="Data di nascita" name="birthDate" required id="date">
-        <label for="date">Data di nascita</label>
-        <br>
-        <label>Genere</label>
-        <br>
-        <input type="radio" required name="gender" id="radio1" value="M">
-        <label for="radio1">Maschio</label>
-        <br>
-        <input type="radio" required name="gender" id="radio2" value="F">
-        <label for="radio2">Femmina</label>
-        <br>
-        <input type="email" placeholder="Email" name="email" required>
-        <br>
-        <input type="password" placeholder="Password" name="password" required>
-        <br>
-        <input type="tel" placeholder="Numero di telefono" name="telNum">
-        <br>
-        <select required name="department">
-            <option value="">Dipartimento</option>
-            <option value="mrk">Marketing</option>
-            <option value="adm">Amministrazione</option>
-            <option value="rsr">Risorse Umane</option>
-            <option value="fin">Finanze</option>
-        </select>
-        <br>
-        <input type="number" placeholder="Stipendio" name="salary" required min="1000">
-        <br>
-        <label>Interessi</label>
-        <br>
-        <input type="checkbox" id="check1" name="tech">
-        <label for="check1">Tecnologia</label>
-        <br>
-        <input type="checkbox" id="check2" name="sport">
-        <label for="check2">Sport</label>
-        <br>
-        <input type="checkbox" id="check3" name="art">
-        <label for="check3">Arte</label>
-        <br>
-        <input type="checkbox" id="check4" name="reading">
-        <label for="check4">Lettura</label>
+        <fieldset>
+            <legend>AZIENDA</legend>
+            <select required name="department">
+                <option value="">Dipartimento</option>
+                <option value="mrk">Marketing</option>
+                <option value="adm">Amministrazione</option>
+                <option value="rsr">Risorse Umane</option>
+                <option value="fin">Finanze</option>
+            </select>
+            <br>
+            <input type="number" placeholder="Stipendio" name="salary" required min="1000">
+            <br>
+            <label>Interessi</label>
+            <br>
+            <input type="checkbox" id="check1" name="tech">
+            <label for="check1">Tecnologia</label>
+            <br>
+            <input type="checkbox" id="check2" name="sport">
+            <label for="check2">Sport</label>
+            <br>
+            <input type="checkbox" id="check3" name="art">
+            <label for="check3">Arte</label>
+            <br>
+            <input type="checkbox" id="check4" name="reading">
+            <label for="check4">Lettura</label>
+        </fieldset>
         <br>
         <input type="reset" value="Reset">
-        <br>
         <input type="submit" value="Submit">
     </form>
 </body>
