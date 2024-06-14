@@ -16,10 +16,10 @@
         <br>
         <label>Genere</label>
         <br>
-        <input type="radio" required name="M" id="radio1">
+        <input type="radio" required name="gender" id="radio1" value="M">
         <label for="radio1">Maschio</label>
         <br>
-        <input type="radio" required name="F" id="radio2">
+        <input type="radio" required name="gender" id="radio2" value="F">
         <label for="radio2">Femmina</label>
         <br>
         <input type="email" placeholder="Email" name="email" required>
@@ -28,12 +28,12 @@
         <br>
         <input type="tel" placeholder="Numero di telefono" name="telNum">
         <br>
-        <select required>
+        <select required name="department">
             <option value="">Dipartimento</option>
-            <option value="M">Marketing</option>
-            <option value="A">Amministrazione</option>
-            <option value="R">Risorse Umane</option>
-            <option value="F">Finanze</option>
+            <option value="mrk">Marketing</option>
+            <option value="adm">Amministrazione</option>
+            <option value="rsr">Risorse Umane</option>
+            <option value="fin">Finanze</option>
         </select>
         <br>
         <input type="number" placeholder="Stipendio" name="salary" required min="1000">
