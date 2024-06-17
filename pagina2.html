@@ -6,23 +6,31 @@
     <title>Pagina 2</title>
 </head>
 <style>
+    body{
+        background-color: coral;
+    }
+
+    .page{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;     
+        gap: 20px;
+    }
+
     .paragrafo::first-line{
         font-size: 120% ;
         font-weight: bold;
     }
+
     .paragrafo{
         background-color: aquamarine;
-        display: flex;
         border: solid black;
-        align-self: center;
-        flex-wrap: wrap;
     }
+
     .links{
-        background-color: aquamarine;
-        display: flex;
-        display: inline-block;
-        border: solid black;     
-        flex-wrap: wrap;   
+        background-color: aquamarine;       
+        display: inline-block flex;
+        border: solid black;  
         a {
             color: #fff;
             &:hover {
@@ -37,29 +45,28 @@
         }
     }
    
-    img{
-        background-color: aquamarine;
-        display: flex;
-        border: solid black;
-        align-self: center;
-        flex-wrap: wrap;
+    .img{
+         border: solid black;
+         align-self: center;
     }
 </style>
-<body style="background-color: coral">
-    <img src="./computerlogo2.jpg" title="Computer">
-    <div class="paragrafo">Un computer, in italiano anche noto come elaboratore o calcolatore, è una macchina automatizzata programmabile in grado di eseguire sia complessi calcoli matematici (calcolatore) sia altri tipi di elaborazioni dati (elaboratore).
+<body>
+    <div class="page">
+        <img src="./computerlogo2.jpg" title="Computer" class="img">
+        <div class="paragrafo">Un computer, in italiano anche noto come elaboratore o calcolatore, è una macchina automatizzata programmabile in grado di eseguire sia complessi calcoli matematici (calcolatore) sia altri tipi di elaborazioni dati (elaboratore).
         Concepito come una macchina per automatizzare alcune capacità della mente umana, 
         come ad esempio il calcolo e la capacità di memorizzazione potenziandone la portata e applicandole alla soluzione di particolari problemi scientifici e ingegneristici,
-         a partire dalla seconda metà del XX secolo, evolve in macchina in grado di eseguire le elaborazioni dati più varie.
-    </div>
-    <div class="links">
-    <a href="./index.html">
-        Vai a pagina 1
-    </a>
-    <br>
-    <a href="./pagina3.html">
-        Vai a pagina 3 per le fonti
-    </a>
+        a partire dalla seconda metà del XX secolo, evolve in macchina in grado di eseguire le elaborazioni dati più varie.
+        </div>
+        <div class="links">
+            <a href="./index.html">
+                Vai a pagina 1
+            </a>
+        <br>
+            <a href="./pagina3.html">
+                Vai a pagina 3 per le fonti
+            </a>
+        </div>
     </div>
 </body>
 </html>
