@@ -9,7 +9,6 @@
     .paragrafo::first-line{
         font-size: 120% ;
         font-weight: bold;
-
     }
     .paragrafo{
         background-color: aquamarine;
@@ -24,7 +23,20 @@
         display: inline-block;
         border: solid black;     
         flex-wrap: wrap;   
+        a {
+            color: #fff;
+            &:hover {
+                color: #f00 !important;
+            }
+            &:focus {
+                color: #0f0;
+            }
+            &:visited {
+                color: #00f;
+            }
+        }
     }
+   
     img{
         background-color: aquamarine;
         display: flex;
