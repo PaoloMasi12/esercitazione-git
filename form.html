@@ -7,33 +7,33 @@
 </head>
 
 <style>
-    [data-tooltip]{
-        position :relative;
+    [data-tooltip]{ /*[data-tooltip] prende l'attributo data-tooltip e ne gestisce lo stile*/         
+        position: relative; /*position: relative per posizionre la tooltip sulla sua posizione, sopra ogni input*/ 
         cursor: default;
     }
     
-    [data-tooltip]::after{
-        position: absolute;
-        width: 140px;
-        left: calc(50% - 70px);
-        bottom: 125%;
+    [data-tooltip]::after{  /*after per agiungere le tooltip senza modificare il contenuto deggli input*/
+        position: absolute;  /*postion: absolute per far visualizzare le tooltip sopra il contentuto*/
+        width: 140px;  
+        left: calc(50% - 70px);  /*allinea le tooltip al centro della larghezza del blocco della tooltip*/
+        bottom: 125%; /*allinea la tooltip sopra gli input*/
         text-align: center;
-        box-sizing: border-box;
+        box-sizing: border-box; 
 
-        content: attr(data-tooltip);
+        content: attr(data-tooltip);  /*imposta il contenuto della tooltip*/
         color: white;
         background-color: black;
         padding: 8px;
         border-radius: 10px;  
         font-weight: bold;
 
-        visibility: hidden;
+        visibility: hidden;  /*la tooltip è nascosta*/
         opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.3s, transform 0.2s;
+        transform: translateY(10px); /*spostamento della tooltip verso il basso*/
+        transition: opacity 0.3s, transform 0.3s; /*animazione: cambio opacità in 0.3s, tempo transizione tooltip verso l'alto:0.2s*/
     }
 
-    [data-tooltip]:hover::after{
+    [data-tooltip]:hover::after{  
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
