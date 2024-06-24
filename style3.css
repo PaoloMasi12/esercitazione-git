@@ -1,0 +1,15 @@
+body{
+    height: 2500px;
+    background-color: coral;
+    font-weight: bold;
+}
+.sticky{
+    position: sticky;
+    background-color: grey;
+    top: 0px;
+    height: 80px;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
