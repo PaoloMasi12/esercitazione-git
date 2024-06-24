@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercitazione1</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 
 <style>
-    body{
-        background-color: coral;
-        margin: 0;
-        padding: 0;
-    }
     * {
         box-sizing: border-box;
     }
@@ -20,7 +16,7 @@
         color: blue;
         background-color: aquamarine;
         font-size: 120% bold;
-        height: 50px;
+        height: 60px;
         width: 500px;
         text-align: center;
         border: solid 10px black;
@@ -32,18 +28,36 @@
     li a{
         color: purple;
     }
+
+    .sticky{
+        position: sticky;
+        background-color: grey;
+        top: 0px;
+        height: 80px;
+        font-size: 200%;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+    }
 </style>
 
 
 
 <body>
+    <!--<div class="sticky">Menù Sticky</div>-->
     <h1 class="titolo">Prima esercitazione con HTML</h1>
+    <div class="sticky">Menù Sticky</div>
     <br>
     <h1 class="paragrafo">Cosa è un computer?</h1>
     <ul>
     <li>
         <a href="./pagina2.html">
         Vai a pagina 2
+        </a>
+    </li>
+    <li>
+        <a href="./pagina3.html">
+        Fonti
         </a>
     </li>
     <li>
