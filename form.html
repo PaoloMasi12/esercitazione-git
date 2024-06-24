@@ -11,58 +11,119 @@
         background-color: white;
     }
 
+
+    [data-tooltip]{ /*[data-tooltip] prende l'attributo data-tooltip e ne gestisce lo stile*/         
+        position: relative; /*position: relative per posizionre la tooltip sulla sua posizione, sopra ogni input*/ 
+        cursor: default;
+    }
+    
+    [data-tooltip]::after{  /*after per agiungere le tooltip senza modificare il contenuto deggli input*/
+        position: absolute;  /*postion: absolute per far visualizzare le tooltip sopra il contentuto*/
+        width: 140px;  
+        left: calc(50% - 70px);  /*allinea le tooltip al centro della larghezza del blocco della tooltip*/
+        bottom: 125%; /*allinea la tooltip sopra gli input*/
+        text-align: center;
+        box-sizing: border-box; 
+
+        content: attr(data-tooltip);  /*imposta il contenuto della tooltip*/
+        color: white;
+        background-color: black;
+        padding: 8px;
+        border-radius: 10px;  
+        font-weight: bold;
+
+        visibility: hidden;  /*la tooltip è nascosta*/
+        opacity: 0;
+        transform: translateY(10px); /*spostamento della tooltip verso il basso*/
+        transition: opacity 0.3s, transform 0.3s; /*animazione: cambio opacità in 0.3s, tempo transizione tooltip verso l'alto:0.2s*/
+    }
+
+    [data-tooltip]:hover::after{  
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 </style>
+
 <body>
     <div class="sticky">Menù Sticky</div>
     <form action="form.html" method="POST" name="form">
         <fieldset>
             <legend>ANAGRAFICA</legend>
-            <input type="text" placeholder="Nome" name="name" required>
+            <span data-tooltip="Inserisci il nome">
+                <input type="text" placeholder="Nome" name="name" required >
+            </span>
             <br>
-            <input type="text" placeholder="Cognome" name="surname" required>
+            <span data-tooltip="Inserisci il cognome">
+                <input type="text" placeholder="Cognome" name="surname" required>
+            </span>
             <br>
-            <input type="date" placeholder="Data di nascita" name="birthDate" required id="date">
+            <span data-tooltip="Inserisci la data di nascita">
+                <input type="date" placeholder="Data di nascita" name="birthDate" required id="date">
+            </span>
             <label for="date">Data di nascita</label>
             <br>
             <label>Genere</label>
             <br>
-            <input type="radio" required name="gender" id="radio1" value="M">
+            <span data-tooltip="Seleziona il tuo genere">
+                <input type="radio" required name="gender" id="radio1" value="M">
+            </span>
             <label for="radio1">Maschio</label>
             <br>
-            <input type="radio" required name="gender" id="radio2" value="F">
+            <span data-tooltip="Seleziona il tuo genere">
+                <input type="radio" required name="gender" id="radio2" value="F">
+            </span>
             <label for="radio2">Femmina</label>
             <br>
-            <input type="email" placeholder="Email" name="email" required>
+            <span data-tooltip="Inserisci la tua email">
+                <input type="email" placeholder="Email" name="email" required>
+            </span>
             <br>
-            <input type="password" placeholder="Password" name="password" required>
+            <span data-tooltip="Inserisci la tua password">
+                <input type="password" placeholder="Password" name="password" required>
+            </span>
             <br>
-            <input type="tel" placeholder="Numero di telefono" name="telNum">
+            <span data-tooltip="Inserisci il tuo numero di telefono">
+                <input type="tel" placeholder="Numero di telefono" name="telNum">
+            </span>
         </fieldset>
         <br>
         <fieldset>
             <legend>AZIENDA</legend>
-            <select required name="department">
+            <span data-tooltip="Seleziona il tuo dipartimento">
+                <select required name="department">
                 <option value="">Dipartimento</option>
                 <option value="mrk">Marketing</option>
                 <option value="adm">Amministrazione</option>
                 <option value="rsr">Risorse Umane</option>
                 <option value="fin">Finanze</option>
             </select>
+            </span>
             <br>
-            <input type="number" placeholder="Stipendio" name="salary" required min="1000">
+            <span data-tooltip="Inserisci il tuo stipendio">
+                <input type="number" placeholder="Stipendio" name="salary" required min="1000">
+             </span>
             <br>
             <label>Interessi</label>
             <br>
-            <input type="checkbox" id="check1" name="tech">
+            <span data-tooltip="Seleziona i tuoi interessi">
+                <input type="checkbox" id="check1" name="tech">
+            </span>
             <label for="check1">Tecnologia</label>
             <br>
-            <input type="checkbox" id="check2" name="sport">
+            <span data-tooltip="Seleziona i tuoi interessi">
+                <input type="checkbox" id="check2" name="sport">
+            </span>
             <label for="check2">Sport</label>
             <br>
-            <input type="checkbox" id="check3" name="art">
+            <span data-tooltip="Seleziona i tuoi interessi">
+                <input type="checkbox" id="check3" name="art">
+            </span>
             <label for="check3">Arte</label>
             <br>
-            <input type="checkbox" id="check4" name="reading">
+            <span data-tooltip="Seleziona i tuoi interessi">
+                <input type="checkbox" id="check4" name="reading">
+            </span>
             <label for="check4">Lettura</label>
         </fieldset>
         <br>
