@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transizione</title>
+</head>
+<style>
+    .container{
+        position: relative;
+        width: 100px;
+        border: solid black 5px;
+        background-color: aqua;
+        transform: translateX(0);
+        transition: transform 5s, color 2s;
+        transition-timing-function: ease-out;
+
+    }
+
+    .container:hover{
+        transform: translateX(1000px);
+        transition: transform 5s, background-color 2s, color 2s;
+        background-color: brown;
+        color: white;
+        transition-timing-function: ease-in;
+    }
+    #box{
+        width: 550px;
+        height: 250px;
+        background-color: crimson;
+        font-size: 13em;
+        text-align: center;
+        animation-name: colorChange;  
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;  
+    }
+
+    @keyframes colorChange{
+        0%{background-color: crimson;}
+        20%{background-color: orange;}
+        40%{background-color: yellow;}
+        60%{background-color: green;}
+        80%{background-color: purple;}
+        100%{background-color: blue;}
+    }
+
+    
+
+    
+
+</style>
+<body>
+    <div class="container">
+        PASSAMI SOPRA!!
+    </div>
+    <br>
+    <div id="box">
+        CIAO
+    </div>
+</body>
+</html>
