@@ -7,6 +7,7 @@
 </head>
 
 <style>
+
     .wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -14,36 +15,42 @@
         gap: 10px;
         width: 95%;
         margin: 0 auto;
+        font-size: 20px;
     }
 
     .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         box-sizing: border-box;
         border: solid black 3px;
         grid-column: 1/5;
-        height: 100px;
+        height: 65px;
         width: 100%;
     }
     
-    .menù{
+    .menu{
         box-sizing: border-box;
         border: solid black 3px;
         grid-column: 1/5;
         height: 100px;
         width: 100%;
+        display: none;
     }
 
     .sidebar{
         box-sizing: border-box;
         border: solid black 3px;
         grid-column: 1/2;
-        height: 600px;
+        height: 100%;
         width: 100%;
+        display: none;
     }
 
     .content{
         box-sizing: border-box;
         border: solid black 3px;
-        grid-column: 2/5;
+        grid-column: 1/5;
         height: auto;
         width: 100%;
     }
@@ -56,15 +63,49 @@
         width: 100%;
     }
 
+    .menu-button{
+        height: 25px;
+        display: block;
+        align-self: flex-end;
+    }
+
+    @media screen and (min-width: 577px) {
+        .content{
+            grid-column: 2/5;
+        }
+
+        .sidebar{
+            grid-column: 1/2;
+            display: block;
+        }
+
+        .menu{
+            display: block;
+        }
+
+        .menu-button{
+            display: none;
+        }
+        
+        .header{
+            height: 100px;
+        }
+    }
+
+
 </style>
 
 <body>
     <div class="wrapper">
         <div class="header">
             header
+                <button class="menu-button">
+                    menù
+                </button>
         </div>
 
-        <div class="menù">
+
+        <div class="menu">
             menù
         </div>
 
